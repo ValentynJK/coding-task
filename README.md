@@ -12,6 +12,19 @@ Also, if you simply don't feel like completing this task, you can send what you'
 Michał Dzienisiewicz  
 Your future colleague
 
+# How to start working on the task
+
+It's a template repository, which means that you have two possibilities:
+
+- [create your own repo out of the template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), so that you can make it private (then please ensure that @Dzieni and @wmertens are invited);
+- or just fork it, but then it's public by default.
+
+Choose whatever you feel comfortable with.
+
+To ensure you're not stuck with compatibility issues, the script relies on vanilla `npm` and Node.js (with a good ol' `require` syntax from CommonJS). You can change it and i.e. migrate to ES Modules and `yarn` if you want.
+
+You can also assume that the script has to run in Node 18 or later, so feel free to use the modern JS syntax.
+
 # The problem
 
 We have [SWAPI](https://swapi.dev), the API of Star Wars universum data. The goal is to synchronize (one-way) the data about **people** to a GraphQL API [here](https://codingtask.stratokit.io).
