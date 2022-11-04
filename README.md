@@ -47,7 +47,7 @@ SQLite connection is established using [better-sqlite3](https://github.com/WiseL
 - `name` - TEXT (and the primary key). The name of this person.
 - `height` - INTEGER. The height of the person in centimeters.
 - `weight` - INTEGER. The height of the person in kilograms.
-- `gender` - INTEGER that acts like an enum. `0` = unknown, `1` = male, `2` = female, `3` = n/a
+- `gender` - INTEGER that acts like an enum. `0` = unknown, `1` = male, `2` = female, `3` = n/a, `4` = other
 - `isSynced` - INTEGER that acts like a boolean. `NULL` = not synced, anything else (preferably `1`) = synced
 
 As you can see, the data structure in the database is a little bit different than what you get in SWAPI. Therefore, the data will have to be converted at some point. Please do this in `normalizeSwapiPerson` function. To ensure the results, you can test it using Jest (`npm test`; you have a ready test file `main.test.js`).
@@ -56,7 +56,7 @@ As you can see, the data structure in the database is a little bit different tha
 
 The endpoint is simply https://codingtask.stratokit.io. When you open that URL in the browser, you'll get a web interface that allows you to explore the schema.
 
-TL;DR version: it contains a single mutation `savePerson`. Input and output is similar to what you store in SQLite, except `gender` being an actual enum: `UNKNOWN`/`MALE`/`FEMALE`/`NA`.
+TL;DR version: it contains a single mutation `savePerson`. Input and output is similar to what you store in SQLite, except `gender` being an actual enum: `UNKNOWN`/`MALE`/`FEMALE`/`NA`/`OTHER`.
 
 On every person from the `people` table, you should perform the `savePerson` mutation. If it ran without errors, you can mark in the database that this person `isSynced`.
 
