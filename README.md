@@ -5,8 +5,6 @@ We have [SWAPI](https://swapi.dev), the API of Star Wars universum data. The goa
 
 # The application structure
 
-
-
 The script (`main.js`) is split into two stages:
 
 - fetching people from SWAPI and saving them into an SQLite database - `getData`;
